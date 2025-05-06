@@ -8,6 +8,14 @@ function Header() {
       position: 'absolute', 
       right: '40px' 
       }}>
+        <Link to="/mymovie"
+        style={{
+          color: 'white', 
+          textDecoration: 'none', 
+          fontSize: '25px',
+          marginRight:'16px' 
+        }}
+        >🎥 MyMovie</Link>
         <Link to="/cart" 
         style={{ 
           color: 'white', 

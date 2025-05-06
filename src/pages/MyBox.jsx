@@ -1,7 +1,7 @@
 import { useMyBox } from "../context/MyBoxContext";
 import MovieCard  from "../MovieCard";
 import './MyBox.css'
-import { Link } from "react-router-dom";
+import HomeButton from "../components/HomeButton";
 
 function MyBox() {
   const {myBox}=useMyBox();
@@ -10,21 +10,7 @@ function MyBox() {
     <div>
       <h2 style={{ color: "white", marginTop: "30px", textAlign: "center" }}>나의 찜 목록</h2>
 
-      <div style={{ padding: "20px", textAlign: "center" }}>
-        <Link
-          to="/"
-          style={{
-            color: "white",
-            textDecoration: "none",
-            fontSize: "18px",
-            border: "1px solid white",
-            padding: "8px 12px",
-            borderRadius: "5px",
-          }}
-        >
-          ← 홈으로
-        </Link>
-      </div>
+      <HomeButton />
 
       <div className="mybox-container">
         {myBox.length === 0 ? (

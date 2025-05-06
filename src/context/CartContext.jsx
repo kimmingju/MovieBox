@@ -4,6 +4,10 @@ const CartContext=createContext();
 
 export function CartProvider({children}){
   const [cartItems, setCartItems]=useState([]);
+  const clearCart = () => {
+    setCartItems([]);
+  };
+  
 
   const addToCart = (movie) => {
     if (!cartItems.some((item) => item.id === movie.id)) {
@@ -20,7 +24,7 @@ export function CartProvider({children}){
   };
 
   return (
-    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, getTotalPrice }}>
+    <CartContext.Provider value={{ cartItems, addToCart, removeFromCart, getTotalPrice,clearCart}}>
       {children}
     </CartContext.Provider>
   );
