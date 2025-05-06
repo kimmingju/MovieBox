@@ -1,4 +1,4 @@
-import HomeButton from "../components/homeButton";
+import HomeButton from "../components/HomeButton";
 import { useCart } from "../context/CartContext";
 import { useMyMovie } from "../context/MyMovieContext";
 
